@@ -1,4 +1,4 @@
-package chap1_3;
+package chap1_3.practice;
 
 // 실행용 클래스: main메서드 작성
 public class DancerMain {

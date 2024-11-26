@@ -1,4 +1,4 @@
-package chap1_3;
+package chap1_3.practice;
 
 import java.util.Arrays;
 
@@ -53,9 +53,10 @@ public class Dancer {
         danceLevel = 0;
     }
 
+    // 오버로딩 (overloading): 메서드를 같은 이름으로 여러 개 생성
+    // 규칙: 이름은 같지만 파라미터의 타입이나 개수가 달라야 함.
     Dancer(String dName) {
-        // 객체 생성시 필드를 초기화
-        dancerName = "뽀로로";
+        dancerName = dName;
         crewName = "도시 춤쟁이들";
         genres = new String[] {"urban"};
         danceLevel = 0;
@@ -68,11 +69,10 @@ public class Dancer {
         danceLevel = 2;
     }
 
-    Dancer(String dName, String cName, String...genrelist) {
+    Dancer(String dName, String cName, String... genreList) {
         dancerName = dName;
         crewName = cName;
-        genres = genrelist;
-        danceLevel = 2;
+        genres = genreList;
+        danceLevel = 0;
     }
-
 }
