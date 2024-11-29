@@ -1,11 +1,11 @@
 package practice.member;
 
 // 회원 객체를 여러개 모아서 관리할 설계도
-public class MemberRepository {
+public class MemberRepository$5삭제 {
 
     Member[] memberList; // 가입된 회원 배열
 
-    MemberRepository() {
+    MemberRepository$5삭제() {
         // [ {회원1}, {회원2}, {회원3} ]
         this.memberList = new Member[] {
                 new Member("abc123@def.com", "1234", "콩벌레", Gender.MALE, 15),
@@ -66,5 +66,42 @@ public class MemberRepository {
         return null;
     }
 
+    void updatePassword(String inputEmail, String newPassword) {
+        // 탐색
+        Member foundMember = findMemberByEmail(inputEmail);
+        // 변경
+        foundMember.password = newPassword;
+    }
 
-}
+
+    public boolean isPasswordMatch(String storedPassword, String inputPassword) {
+        return storedPassword.equals(inputPassword);
+    }
+
+    void removeMember(String inputEmail) {
+
+        // 삭제 대상의 인덱스를 알아내야 함.
+        int index = findIndexByEmail(inputEmail); // 새로 함수 생성
+
+        // 삭제 대상부터 앞으로 한칸씩 땡기기
+        for (int i = 0; i < memberList.length - 1; i++) {
+            memberList[i] = memberList[i + 1];
+        }
+        Member[] temp = new Member[memberList.length - 1];
+        for (int i = 0; i < temp.length; i++) {
+            temp[i] = memberList[i];
+        }
+        memberList = temp;
+    }
+
+    int findIndexByEmail(String inputEmail) {
+        for (int i = 0; i < memberList.length; i++) {
+            String storedEmail = memberList[i].email;
+            if (inputEmail.equals(storedEmail)) {
+                return i;
+        }
+    }
+    return -1;
+        }
+    }
+

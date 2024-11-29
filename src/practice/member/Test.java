@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
 
         // 멤버 저장소 객체 생성
-        MemberRepository mr = new MemberRepository();
+        MemberRepository$이전 mr = new MemberRepository$이전();
 
         // 멤버 추가
         mr.addMember(new Member("midol4@naver.com", "9999", "하몽덕후", Gender.THEY, 30));;

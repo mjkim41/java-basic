@@ -3,15 +3,15 @@ package practice.member;
 import java.util.Scanner;
 
 // 역할: 회원관리 앱의 입출력을 담당
-public class MemberController {
+public class MemberController$이전 {
 
     // 필드 - 의존성 필드 (객체가 일을 하기 위해 다른 객체에 의존(협력))
     Scanner sc;
-    MemberRepository mr;
+    MemberRepository$이전 mr;
 
-    MemberController() {
+    MemberController$이전() {
         this.sc = new Scanner(System.in);
-        this.mr = new MemberRepository();
+        this.mr = new MemberRepository$이전();
     }
 
     // 프로그램 초기 화면 출력
