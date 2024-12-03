@@ -14,8 +14,7 @@ public class Car {
     public Car(String manufacturer, String model, String dateString) {
         this.manufacturer = manufacturer;
         this.model = model;
-        int year = dateToYear(dateString);
-        this.year = year;
+        this.year = dateToYear(dateString);
     }
 
     // !! 사용자가 날짜를 "yyyy-mm-dd" 형식으로 입력하면, 날짜 형식으로 인식하여 year만 추출하는 함수
