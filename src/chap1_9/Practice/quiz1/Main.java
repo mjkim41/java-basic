@@ -1,4 +1,4 @@
-package chap1_9.quiz1;
+package chap1_9.Practice.quiz1;
 
 public class Main {
 
