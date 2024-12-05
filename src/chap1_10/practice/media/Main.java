@@ -1,4 +1,4 @@
-package chap1_10.inter.quiz;
+package chap1_10.practice.media;
 
 public class Main {
 

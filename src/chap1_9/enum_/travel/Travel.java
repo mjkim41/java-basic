@@ -11,7 +11,7 @@ public class Travel {
     }
 
     public void printCity() {
-        System.out.printf("%s으로 여행", city);
+        System.out.printf("%s으로 여행", city.getCityInKorean());
     }
 
 
