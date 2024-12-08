@@ -1,4 +1,4 @@
-package chap2_4.collection.set;
+package chap2_4.set;
 
 import java.util.*;
 
@@ -17,6 +17,7 @@ public class SetExample {
                 ------------
                 1, 2, 3, 4, 5
          */
+
 
 
 
@@ -52,6 +53,7 @@ public class SetExample {
         Set<Integer> numSet = new HashSet<>(numbers);
         System.out.println(numSet);
 
+
         // 다시 list로 변환
         numbers = new ArrayList<>(numSet);
         numbers.add(9);
@@ -68,6 +70,9 @@ public class SetExample {
         personSet.add(p2);
         personSet.add(p3);
         System.out.println(personSet);
+
+
+
     }
 }
 
@@ -101,5 +106,6 @@ class Person {
     public int hashCode() {
         return Objects.hash(name, ssn);
     }
+
 }
 

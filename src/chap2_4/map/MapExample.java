@@ -1,4 +1,4 @@
-package chap2_4.collection.map;
+package chap2_4.map;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -23,12 +23,15 @@ public class MapExample {
         map.put("hireDate", LocalDate.of(2012, 3, 15));
         map.put("salary", 5000000);
 
+
+
         System.out.println(map);
         System.out.println(map.size()); // key값 만큼 출력됨(3)
 
         // 맵에 있는 데이터 꺼내기
-        String empName = (String) map.get("empName"); // 다운캐스팅
+        String empName = (String) map.get("empName"); // !!다운캐스팅(내가 맨 처음에 맵 생성할 때 value를 object로 정의 했었었음)
         System.out.println("empName = " + empName);
+
 
         int salary = (int) map.get("salary");
 
