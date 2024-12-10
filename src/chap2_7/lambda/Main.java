@@ -39,8 +39,8 @@ public class Main {
         System.out.println("weightGT150 = " + weightGT150);
 
         // 빨강색이면서 무게가 150 미만인 사과를 필터링
-        List<Apple> applesSomethings = filterApples(appleBasket, new AppleSomething());
-        System.out.println("applesSomethings = " + applesSomethings);
+//        List<Apple> applesSomethings = filterApples(appleBasket, new AppleSomething());
+//        System.out.println("applesSomethings = " + applesSomethings);
 
         System.out.println("========");
 
@@ -74,9 +74,18 @@ public class Main {
         System.out.println("filterNumbers = " + filterNumbers);
 
         List<String> foods = List.of("짜장면", "우동", "김", "탕수육");
+        // f은 어디서 왔냐?
+        // 아래에서 람다식은 아래와 같이 GenericPredicate를 상속받은 구체화된 객체를 만드는 것과 같음
+        /* class newClass extends GenericPredicate {
+            @Override
+            public boolean test {
+                return n % 2 == 0
+            }
+        }
+        */
         List<String> filterFoods = filter(foods, f -> f.length() == 3);
         System.out.println("filterFoods = " + filterFoods);
-
+        
         System.out.println("=========");
 
         List<Color> colorList = mappingApplesByColor(appleBasket);

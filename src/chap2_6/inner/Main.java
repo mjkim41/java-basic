@@ -7,6 +7,7 @@ public class Main {
         나는 뺄셈 계산기가 필요한데 아무래도 여기서만 쓰고
         다른데서는 안쓸 것 같다.
      */
+
     private static class SubCalculator implements Calculator {
 
         @Override
@@ -39,6 +40,9 @@ public class Main {
                 return n1 * n2;
             }
         };
+
+
+
 
         int result3 = multiCal.operate(6, 11);
         System.out.println("result3 = " + result3);

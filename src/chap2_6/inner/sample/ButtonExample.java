@@ -8,6 +8,7 @@ public class ButtonExample {
 
     public static void main(String[] args) {
 
+
         JFrame frame = new JFrame("인스턴스 내부 클래스 예제");
         JButton button = new JButton("클릭하세요");
 
